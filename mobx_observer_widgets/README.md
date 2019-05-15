@@ -3,11 +3,11 @@
 Simplified observing of values through MobX store in Flutter.
 
 ## Introduction
-This library helps developers who use MobX for state management to flattern their widget tree.
+This library helps developers who use MobX for state management to flatten their widget tree.
 
 ## Example
 
-#### Regular use od MobX in Flutter
+#### Regular use of MobX in Flutter
     Observer(
 	    builder: (context) =>  Text(
 		    '${counter.counter}',
@@ -26,7 +26,7 @@ This library helps developers who use MobX for state management to flattern thei
 For full code example with MobX and MobX Observer Widgets see the [example project.](https://github.com/veresvit/mobx_observer_widgets/tree/master/example)
 
 ## Supported Widgets
-The original widget is prefixed with word Observer and constructor similiar to the original one is provided.
+The original widget is prefixed with word Observer and constructor similar to the original one is provided.
 #### ObserverText
     ObserverText(
 	    (context) =>  "${counter.counter}",
