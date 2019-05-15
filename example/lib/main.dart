@@ -1,6 +1,5 @@
 import 'package:example/counter_store.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:mobx_observer_widgets/material/material.dart';
 
 Counter counter = new Counter();
@@ -11,11 +10,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: "Flutter Demo",
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
+      home: MyHomePage(title: "ObserverWidgets example"),
     );
   }
 }
@@ -32,19 +31,19 @@ class MyHomePage extends StatelessWidget {
       ),
       body: Center(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.start,
           children: <Widget>[
             Text(
-              'You have pushed the button this many times:',
+              "You have pushed the button this many times:",
             ),
-            Observer(
-              builder: (BuildContext context) => Text(
-                    '${counter.counter}',
-                    style: Theme.of(context).textTheme.display1,
-                  ),
-            ),
+            Text("ObserverText"),
             ObserverText(
-              () => "${counter.counter}",
+              (context) => "${counter.counter}",
+              style: Theme.of(context).textTheme.display1,
+            ),
+            Text("ObserverText.rich"),
+            ObserverText.rich(
+              (context) => TextSpan(text: "${counter.counter}"),
               style: Theme.of(context).textTheme.display1,
             ),
           ],
@@ -52,7 +51,7 @@ class MyHomePage extends StatelessWidget {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () => counter.increment(),
-        tooltip: 'Increment',
+        tooltip: "Increment",
         child: Icon(Icons.add),
       ),
     );

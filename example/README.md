@@ -1,3 +1,3 @@
 # MobX Observer Widgets example
 
-Example of Observer Widgets for MobX
+An example of Observer Widgets for MobX

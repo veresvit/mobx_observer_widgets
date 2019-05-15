@@ -13,7 +13,7 @@ class ObserverText extends Observer {
   final int maxLines;
   final String semanticsLabel;
 
-  ObserverText(String data(),
+  ObserverText(String data(BuildContext context),
       {Key key,
       this.style,
       this.strutStyle,
@@ -28,7 +28,7 @@ class ObserverText extends Observer {
       : super(
             key: key,
             builder: (context) => Text(
-                  data(),
+                  data(context),
                   style: style,
                   strutStyle: strutStyle,
                   textAlign: textAlign,
@@ -41,7 +41,7 @@ class ObserverText extends Observer {
                   semanticsLabel: semanticsLabel,
                 ));
 
-  ObserverText.rich(TextSpan textSpan(),
+  ObserverText.rich(TextSpan textSpan(BuildContext context),
       {Key key,
       this.style,
       this.strutStyle,
@@ -56,7 +56,7 @@ class ObserverText extends Observer {
       : super(
             key: key,
             builder: (context) => Text.rich(
-                  textSpan(),
+                  textSpan(context),
                   style: style,
                   strutStyle: strutStyle,
                   textAlign: textAlign,
