@@ -1,0 +1,1 @@
+library mobx_observer_widgets;

@@ -1,0 +1,21 @@
+name: mobx_observer_widgets
+description: Simplified observing of values through MobX store.
+version: 0.0.1
+author: Vit Veres <veres.vit@gmail.com>
+homepage: https://github.com/veresvit
+
+environment:
+  sdk: ">=2.1.0 <3.0.0"
+
+dependencies:
+  mobx: ^0.1.4
+  flutter_mobx: ^0.1.3
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+# The following section is specific to Flutter.
+flutter:
