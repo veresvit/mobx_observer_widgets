@@ -24,21 +24,6 @@ mixin _$Counter on _Counter, Store {
     _$counterAtom.reportChanged();
   }
 
-  final _$textNewsAtom = Atom(name: '_Counter.textNews');
-
-  @override
-  String get textNews {
-    _$textNewsAtom.reportObserved();
-    return super.textNews;
-  }
-
-  @override
-  set textNews(String value) {
-    _$textNewsAtom.context.checkIfStateModificationsAreAllowed(_$textNewsAtom);
-    super.textNews = value;
-    _$textNewsAtom.reportChanged();
-  }
-
   final _$_CounterActionController = ActionController(name: '_Counter');
 
   @override
