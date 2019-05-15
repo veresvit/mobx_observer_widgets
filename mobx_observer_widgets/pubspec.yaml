@@ -1,6 +1,6 @@
 name: mobx_observer_widgets
 description: Simplified observing of values through MobX store.
-version: 0.0.1
+version: 0.0.2
 author: Vit Veres <veres.vit@gmail.com>
 homepage: https://github.com/veresvit/mobx_observer_widgets
 
